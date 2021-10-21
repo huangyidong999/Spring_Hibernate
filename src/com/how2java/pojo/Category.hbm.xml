@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!--> The first statement which is class explain the java class Category match the table which is category_ in database
+	  The second statement id, which is match the column(Attribute) id on the table, native means it is increase by itself
+	  The third statement name, only claim the 'name' but it doesn't mentioned the column, in this case, the column(Attribute)
+	  also will ref as 'name'
+<-->
+<hibernate-mapping package="com.how2java.pojo">
+	<class name="Category" table="category_">
+		<id name="id" column="id">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="name" />
+
+	</class>
+	
+</hibernate-mapping>
